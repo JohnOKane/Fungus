@@ -33,7 +33,7 @@ namespace Fungus
 				if (command.indentLevel == indent)
 				{
 					System.Type type = command.GetType();
-					if (type == typeof(End) || (type == typeof(EndIf)))
+					if (type == typeof(End) || type == typeof(EndIf))
 					{
 						// Execute command immediately after the EndIf command
 						Continue(command.commandIndex + 1);
